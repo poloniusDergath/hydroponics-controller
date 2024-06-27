@@ -1,2 +1,1 @@
-idf_component_register(SRCS "main.c"
-                    INCLUDE_DIRS ".")
+idf_component_register(SRCS "water_level.c" "relay.c" "hydroponics_controller_main.c" INCLUDE_DIRS ".")
