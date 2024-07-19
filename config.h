@@ -1,4 +1,4 @@
-/*  Definitions and functions for water level control
+/*  Configuration parameters for the hydroponics controller
 
     This file is part of hydroponics-controller.
 
@@ -12,10 +12,9 @@
 
     You should have received a copy of the GNU General Public License along with hydroponics-controller. If not, see 
     <https://www.gnu.org/licenses/>. 
-*/
-#include <stdio.h>
-
-enum WaterState {FILLING, EMPTYING};
-
-void setupWaterSwitches();
-uint8_t shouldTankBeRefilled();
+ */
+#define RELAY_GPIO              GPIO_NUM_6
+#define WATER_LEVEL_LOW_GPIO    GPIO_NUM_20
+#define WATER_LEVEL_HIGH_GPIO   GPIO_NUM_22
+#define WATER_LEVEL_BIT_MASK    (1ULL << WATER_LEVEL_HIGH_GPIO | 1ULL << WATER_LEVEL_LOW_GPIO)
+#define TEMPERATURE_PROBE_GPIO  (4)
